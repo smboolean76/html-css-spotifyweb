@@ -1,0 +1,121 @@
+:root {
+    --ratio: 1.5;
+    --s-5: calc(var(--s-4) / var(--ratio));
+    --s-4: calc(var(--s-3) / var(--ratio));
+    --s-3: calc(var(--s-2) / var(--ratio));
+    --s-2: calc(var(--s-1) / var(--ratio));
+    --s-1: calc(var(--s0) / var(--ratio));
+    --s0: 1rem;
+    --s1: calc(var(--s0) * var(--ratio));
+    --s2: calc(var(--s1) * var(--ratio));
+    --s3: calc(var(--s2) * var(--ratio));
+    --s4: calc(var(--s3) * var(--ratio));
+    --s5: calc(var(--s4) * var(--ratio));
+  }
+  html {
+    font-size: var(--s-1);
+  }
+/*-----------------------
+    RESET
+-----------------------*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+body {
+    height: 100vh;
+}
+
+header {
+    position: fixed;
+    right: 0;
+    left: 300px;
+    background-color: red;
+    height: 90px;
+}
+
+.page-container {
+    display: flex;
+    height: calc(100% - 80px);
+    background-color: aqua;
+}
+
+aside {
+    width: 300px;
+    background-color: blueviolet;
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+
+main {
+    width: 100%;
+    /* flex-grow: 1; */
+    overflow-y: auto;
+}
+
+footer {
+    height: 80px;
+    background-color: bisque;
+}
+
+.account {
+    background-color: brown;
+    padding: 20px;
+    margin-top: auto;
+}
+
+.logo {
+    height: 90px;
+    padding: 20px;
+}
+
+.main-nav li {
+    display: flex;
+    align-items: center;
+    padding-left: 18px;
+}
+.main-nav li img {
+    height: 25px;
+}
+
+.main-nav li {
+    border-left: 2px solid transparent;
+}
+.main-nav li:first-child {
+    border-color: lightgreen;
+}
+.playlist {
+    padding: 20px;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+.playlist-header {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.hide-desktop {
+    display: none;
+}
+
+/* Mobile */
+@media screen and (max-width: 600px) {
+    aside {
+        width: 50px;
+    }
+    .hide-mobile {
+        display: none;
+    }
+    .hide-desktop {
+        display: block;
+    }
+}
