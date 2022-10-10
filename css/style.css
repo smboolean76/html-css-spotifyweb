@@ -1,20 +1,3 @@
-:root {
-    --ratio: 1.5;
-    --s-5: calc(var(--s-4) / var(--ratio));
-    --s-4: calc(var(--s-3) / var(--ratio));
-    --s-3: calc(var(--s-2) / var(--ratio));
-    --s-2: calc(var(--s-1) / var(--ratio));
-    --s-1: calc(var(--s0) / var(--ratio));
-    --s0: 1rem;
-    --s1: calc(var(--s0) * var(--ratio));
-    --s2: calc(var(--s1) * var(--ratio));
-    --s3: calc(var(--s2) * var(--ratio));
-    --s4: calc(var(--s3) * var(--ratio));
-    --s5: calc(var(--s4) * var(--ratio));
-  }
-  html {
-    font-size: var(--s-1);
-  }
 /*-----------------------
     RESET
 -----------------------*/
@@ -107,6 +90,38 @@ footer {
     display: none;
 }
 
+/* Main */
+main {
+    padding-top: 120px;
+}
+.secondary-nav ul {
+    display: flex;
+    justify-content: center;
+}
+.secondary-nav li {
+    position: relative;
+    list-style: none;
+}
+
+.secondary-nav li a {
+    display: inline-block;
+    padding: .625rem;
+    text-decoration: none;
+}
+
+.secondary-nav li:first-child::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 25px);
+    width: 50px;
+    height: 3px;
+    background-color: lightgreen;
+}
+.secondary-nav li:hover a {
+    color: #fff;
+}
 /* Mobile */
 @media screen and (max-width: 600px) {
     aside {
